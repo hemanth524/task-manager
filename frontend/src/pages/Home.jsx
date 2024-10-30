@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     document.title = isLoggedIn ? `${authState.user.name}'s tasks` : "Task Manager";
-  }, [authState]);
+  }, [isLoggedIn, user?.name]);
 
   return (
     <MainLayout>
